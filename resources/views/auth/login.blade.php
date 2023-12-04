@@ -33,7 +33,7 @@
         </div>
 
         {{--  --}}
-        <div class="flex justify-between my-4">
+        <div class="flex justify-between mt4">
             <x-link :href="route('register')">
                 {{ __('Crear cuenta') }}
             </x-link>
@@ -41,8 +41,12 @@
                 {{ __('Olvide mi contraseña') }}
             </x-link>
         </div>
-        <x-primary-button class="w-full justify-center">
-            {{ __('Iniciar sesion') }}
-        </x-primary-button>
+
+        {{-- SUBMIT BUTTON --}}
+        <div class="mt-4">
+            <x-primary-button class="w-full justify-center">
+                {{ __('Iniciar sesion') }}
+            </x-primary-button>
+        </div>
     </form>
 </x-guest-layout>
