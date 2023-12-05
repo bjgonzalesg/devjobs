@@ -37,6 +37,7 @@ class CrearVacante extends Component
 
         // ALMACENAR LA IMAGEN
         $imagen = $this->imagen->store('public/vacantes');
+        // REEMPLAZA UN STRING POR OTRO ('currentlyString','newString',string)
         $nombre_imagen = str_replace('public/vacantes/', '', $imagen);
 
         // CREAR LA VACANTE
@@ -53,6 +54,8 @@ class CrearVacante extends Component
 
         // CREANDO UN MENSAJE
         session()->flash('mensaje', 'La vacante se publico correctamente');
+
+        
 
         // REDIRECCIONANDO
         return redirect()->route('vacantes.index');

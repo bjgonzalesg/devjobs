@@ -28,6 +28,8 @@ Route::get('/dashboard', function () {
 Route::controller(VacanteController::class)->prefix('vacante')->group(function () {
     Route::get('/', 'index')->name('vacantes.index');
     Route::get('/create', 'create')->name('vacantes.create');
+    Route::get('{vacante:id}/edit', 'edit')->name('vacantes.edit');
+    Route::get('{vacante:id}', 'show')->middleware(null)->name('vacantes.show');
 })->middleware(['auth']);
 
 // PERFIL
